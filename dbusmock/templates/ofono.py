@@ -134,7 +134,7 @@ def new_imsi(mock):
 # Use a counter so that the result is predictable for tests.
 def new_iccid(mock):
     iccid = '893581234' + ('%012d' % mock.iccid_counter)
-    mock.iccid_counter = mock.iccid_counter + 1
+    mock.iccid_counter += 1
     return iccid
 
 #  interface org.ofono.VoiceCallManager {
